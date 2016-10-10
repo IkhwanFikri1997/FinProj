@@ -9,4 +9,5 @@ add some features that available in another word processor. Word Processor is so
   <li>Function SaveDocument</li></ul>
   <font face="calibri" size="2" color="black"><p>In Function NewDocument, you can make and type your own word documents and can save it with any names 
 and formats do you want. In Function OpenDocument, you can open your documents and display it or edit it. In Function SaveDocument, you can rename your
-file, and save your file after editing.</p>
+file, and save your file after editing.<br></p>
+<p>If you want to know more about the process of this function then you can open "Logic Plan.Txt"</p>
