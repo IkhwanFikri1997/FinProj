@@ -1,7 +1,0 @@
-function Addition(){
-cout << "please input the number";
-cin >> a,b;
-int g=a+b;
-cout << "sum of the number is adalah : " << g;
-return g;
-} 

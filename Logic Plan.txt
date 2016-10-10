@@ -1,0 +1,37 @@
+Function Menu(){
+show the menu;
+}
+
+Function NewDocument(string dan string[array] variable){
+1. Ask you to name your file("D3D.dll","Readme.Txt");
+2. Ask how many line/paragraph for the text;
+3. Input the teks each line/paragraph;
+4. the file has been saved automatically after you close the file;
+}
+
+Function OpenDocument(string variable){
+1. Put the name of the file;
+2. if the name that has been input was the same than the available file then{
+	The file will opened.
+	} or else {
+	The it says that there is no file like that
+	}
+3. if the file was opened then{there's a two choices : display it or edit it
+	if you choose display then{
+		the file will display itself;
+	} or else if you choose edit then{
+		the file will display and you can type it and changed it;}
+	}
+4. if you close the file then{it goes back to menu and the file will be closed.}
+
+Function SaveDocument(String Variable){
+1. Put the name of the file;
+2. if the name of file was as same as the available one then{
+	it gonna ask you "do you want to rename it?";
+		if yes then{
+		ask the new filename that you want to changed;
+		the filename will changed;
+		}
+		}or else then{
+		it will saved as the name like that}
+	
