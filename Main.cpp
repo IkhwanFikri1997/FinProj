@@ -3,11 +3,8 @@
 #include <fstream>
 #include <string>
 #include <cmath>
+#include "Basic.cpp"
 using namespace std;
-
-void NewDocument();
-void OpenDocument();
-void SaveDocument();
 
 int main(){
 	int menu;
@@ -25,18 +22,6 @@ int main(){
 	cin >> menu;
 	switch (menu) {
 		case 1: NewDocument();break;
-		case 2: OpenDocument();break;
-		case 3: SaveDocument();break;
 	}
 	return 0;
-}
-
-void NewDocument(){
-	string Inputfile;
-	cout << "===============New Document================";
-	cout << "Please Input your Filename with your format(.txt,.doc,.cpp, and so on)";
-	cin >> Inputfile;
-	ifstream Myfile;
-	Myfile.open(Inputfile);
-	cout << "file saved";
 }
