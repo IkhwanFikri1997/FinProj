@@ -22,6 +22,8 @@ int main(){
 	cin >> menu;
 	switch (menu) {
 		case 1: NewDocument();break;
+		case 2: OpenDocument();break;
+		case 3: SaveDocument();break;
 	}
 	return 0;
 }

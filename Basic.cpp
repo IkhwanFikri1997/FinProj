@@ -7,17 +7,31 @@ using namespace std;
 
 void NewDocument(){
 	string inputfile;
-	string text[];
+	string text;
 	cout << "===============New Document================" << endl;
 	cout << "Please Input your Filename with your format(.txt,.doc,.cpp, and so on)" << endl;
 	cin >> inputfile;
 	ofstream Myfile;
 	Myfile.open(inputfile.c_str());
 	do{
-	cin >> text[i];
-	getline(cin,text);
+		getline(cin,text);
+		Myfile << text<<endl;
 	}while(text!="end");
-	Myfile << text;
 	cout << "file saved";
 	Myfile.close();
+}
+
+void OpenDocument(){
+	string inputfile;
+	string text;
+	cout << "===============New Document================" << endl;
+	cout << "Please Input your Filename with your format(.txt,.doc,.cpp, and so on)" << endl;
+	cin >> inputfile;
+	ifstream Myfile;
+	Myfile.open(inputfile.c_str());
+	
+}
+
+void SaveDocument(){
+	
 }
