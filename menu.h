@@ -5,17 +5,12 @@
 using namespace std;
 
 class menu {
-	input Input;
+	input input;
 	public:
+		Menu();
 		void NewDocument();
 		void OpenDocument();
 		void EditDocument();
-		void FindWords();		
 };
 
-class word{
-	input input;
-	public:
-		void SortWords();
-};
 #endif

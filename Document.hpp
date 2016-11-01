@@ -1,5 +1,5 @@
-#ifndef Document_hpp
-#define Document_hpp
+#ifndef document_hpp
+#define document_hpp
 
 #include <iostream>
 #include <fstream>
@@ -13,6 +13,8 @@ class input {
 	string file;
 	string text;
 	string line;
+	string word;
+	string find;
 };
 
 #endif

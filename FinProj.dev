@@ -1,6 +1,6 @@
 [Project]
 FileName=FinProj.dev
-Name=FinProj
+Name=Project1
 Type=1
 Ver=2
 ObjFiles=
@@ -27,8 +27,8 @@ CommandLine=
 Folders=
 IncludeVersionInfo=0
 SupportXPThemes=0
-CompilerSet=3
-CompilerSettings=0000000100000000000000000
+CompilerSet=0
+CompilerSettings=0000000000000000000000000
 UnitCount=4
 
 [VersionInfo]
@@ -50,17 +50,7 @@ ProductVersion=
 AutoIncBuildNr=0
 SyncProduct=1
 
-[Unit2]
-FileName=Menu.hpp
-CompileCpp=1
-Folder=
-Compile=1
-Link=1
-Priority=1000
-OverrideBuildCmd=0
-BuildCmd=
-
-[Unit3]
+[Unit1]
 FileName=main.cpp
 CompileCpp=1
 Folder=
@@ -70,8 +60,8 @@ Priority=1000
 OverrideBuildCmd=0
 BuildCmd=
 
-[Unit4]
-FileName=Menu.cpp
+[Unit2]
+FileName=document.hpp
 CompileCpp=1
 Folder=
 Compile=1
@@ -80,8 +70,18 @@ Priority=1000
 OverrideBuildCmd=0
 BuildCmd=
 
-[Unit1]
-FileName=Document.hpp
+[Unit3]
+FileName=menu.hpp
+CompileCpp=1
+Folder=
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+
+[Unit4]
+FileName=menu.cpp
 CompileCpp=1
 Folder=
 Compile=1
