@@ -10,12 +10,12 @@ class menu {
 		void NewDocument();
 		void OpenDocument();
 		void EditDocument();
-		void FindWords();		
+		void FindWords();
+		void CopyText();
 };
 
 class word{
-	input input;
 	public:
-		void SortWords();
+		void SortWords(string[],int);
 };
 #endif

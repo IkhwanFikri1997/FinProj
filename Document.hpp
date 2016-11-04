@@ -11,6 +11,7 @@ class input {
 	ofstream Myfile;
 	ifstream Mfile;
 	string file;
+	string otherfile;
 	string text;
 	string line;
 	string word;
