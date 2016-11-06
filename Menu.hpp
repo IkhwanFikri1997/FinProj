@@ -2,9 +2,10 @@
 #define menu_hpp
 
 #include "document.hpp"
+#include "shape.hpp"
 using namespace std;
 
-class menu {
+class menu{
 	input Input;
 	public:
 		void NewDocument();
@@ -12,6 +13,7 @@ class menu {
 		void EditDocument();
 		void FindWords();
 		void CopyText();
+		void ShapeGenerator();
 };
 
 class word{

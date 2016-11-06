@@ -17,8 +17,9 @@ int main(){
 		 << "|              3. Edit Document            |" << endl
 		 << "|              4. Find Words               |" << endl
 		 << "|              5. Copy Text                |" << endl
+		 << "|              6. Shape Generator          |" << endl
 		 << "|                                          |" << endl
-		 << "|please input the number(1-5)              |" << endl
+		 << "|please input the number(1-7)              |" << endl
 		 << "============================================" << endl;
 	cin >> choice;
 	switch (choice) {
@@ -27,8 +28,7 @@ int main(){
 		case 3: menus.EditDocument();break;
 		case 4: menus.FindWords();break;
 		case 5: menus.CopyText();break;
-		case 6: 
-		case 7:
+		case 6: menus.ShapeGenerator();break;
 		default:
 			cout <<"Invalid Choice"<<endl;break;
 	}

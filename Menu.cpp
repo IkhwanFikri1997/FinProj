@@ -1,4 +1,5 @@
 #include "menu.hpp"
+#include "shape.hpp"
 using namespace std;
 
 void menu::NewDocument(){
@@ -39,14 +40,10 @@ void menu::EditDocument(){
 	Input.Myfile.close();
 }
 
-struct Find{
+void menu::FindWords(){
 	int count=0;
 	int total=0;
 	string text[99999];
-};
-
-void menu::FindWords(){
-	Find fnd;
 	word words;
 	cout << "===============Find Words================" << endl;
 	cout << "Please Input your Filename that you want to open" << endl;
@@ -55,21 +52,21 @@ void menu::FindWords(){
 	cout << "Please Input the words that you want to find" << endl;
 	cin >> Input.find;
 	while (Input.Mfile>>Input.word){
-		fnd.count++;
+		count++;
 	}
-	cout << "this file had " << fnd.count << " words";
+	cout << "this file had " << count << " words";
 	Input.Mfile.close();
 	Input.Mfile.open(Input.file);
-	for (int i=0;i<fnd.count;i++){
-		Input.Mfile>>fnd.text[i];
+	for (int i=0;i<count;i++){
+		Input.Mfile>>text[i];
 	}
-	words.SortWords(fnd.text,fnd.count);
-	for(int i=0;i<fnd.count;i++){
-		if(fnd.text[i]==Input.find){
-			fnd.total++;
+	words.SortWords(text,count);
+	for(int i=0;i<count;i++){
+		if(text[i]==Input.find){
+			total++;
 		}
 	}
-	cout << " and there are " << fnd.total << " matches" << endl;	
+	cout << " and there are " << total << " matches" << endl;	
 }
 
 void word::SortWords(string text[],int count){
@@ -93,15 +90,9 @@ void word::SortWords(string text[],int count){
 }
 
 void menu::CopyText(){
-	string choice;
-	string choice2;
-	int lines;
-	int lines2;
-	string lines3;
-	word words;
+	string choice,choice2,line,lines3;
+	int lines,lines2;
 	int count=0;
-	string line;
-	input Input;
 	cout << "===============Copy Text================" << endl;
 	cout << "Please Input your filename that you want to open" << endl;
 	cin >> Input.file;
@@ -146,4 +137,45 @@ void menu::CopyText(){
 	cout << "Copy Text Completed" << endl;
 	Input.Myfile.close();
 	Input.Mfile.close();
+}
+
+void menu::ShapeGenerator(){
+	int choice,size,width,length;
+	shape shape;
+	string file;
+	cout << "===============Shape Generator================" << endl;
+	cout << "Please Input your Filename with your format(.txt,.doc,.cpp, and so on)" << endl;
+	cin >> file;
+	cin.ignore();
+	cout << "Which Shape do you want to draw?" << endl
+		 << "1.Rectangle" << endl
+		 << "2.Pyramid" << endl
+		 << "3.Triangle" << endl
+		 << "4.Inverted Triangle" << endl
+		 << "5.Square" << endl
+		 << "6.Trapezium" << endl
+		 << "7.Diamond" << endl
+		 << "8.Parallelogram" << endl;
+	cin >> choice;
+	if(choice==1){
+		cout << "How long rectangle's width you want to draw?";
+		cin >> width;
+		cout << "How long rectangle's length you want to draw?";
+		cin >> length;
+		shape.Rectangle(file,width,length);
+	}
+	cout << "How much size do you want to print?" << endl;
+	cin >> size;
+	switch (choice){
+		case 2: shape.Pyramid(file,size);break;
+		case 3: shape.Triangle(file,size);break;
+		case 4: shape.InvertedTriangle(file,size);break;
+		case 5: shape.Square(file,size);break;
+		case 6: shape.Trapezium(file,size);break;
+		case 7: shape.Diamond(file,size);break;
+		case 8: shape.Parallelogram(file,size);break;
+		default:
+			cout << "invalid data" << endl;break;
+	}
+	cout << "Print Shape Completed !" << endl;
 }
